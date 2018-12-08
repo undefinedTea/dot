@@ -1,0 +1,48 @@
+set -e
+
+usage() {
+  echo "./environment [option] [role...]"
+  echo ""
+  echo "[option]"
+  echo "-h / --help         provide command information"
+  echo "-d / --dry-run      validate"
+  echo "-s / --single       one runbook task at the time"
+  echo ""
+  echo "\033[2m_any_ further option as --xxx is provided to ansible\033[0m"
+  echo ""
+  echo "where [role] is:"
+  for ROLE in $(ls roles); do
+    echo "  \033[4m$ROLE\033[0m - $(cat roles/$ROLE/description)"
+  done
+}
+
+OPTION=()
+
+while [ $# -gt 0 ]; do
+  if [ "$1" = '--help' -o "$1" = '-h' ]; then
+    usage
+    exit
+  elif [ "$1" = '--dry-run' -o "$1" = '-d' ]; then
+    OPTION+=("--check")
+  elif [ "$1" = '--single' -o "$1" = '-s' ]; then
+    OPTION+=("--step")
+  elif [ -n "$1" ]; then
+    if [ -d "roles/$1" ]; then
+      ROLE="--tags $1"
+    elif [[ "$1" == --* ]]; then
+      OPTION+=("$1")
+    else
+      echo "invalid option: $*"
+      exit 1
+    fi
+  fi
+  shift
+done
+
+if ! type ansible &> /dev/null; then
+  source tmp/ansible/hacking/env-setup &> /dev/null
+fi
+
+ansible-playbook -i inventory -K ${ROLE} "${OPTION[@]}" darwin.yml
+
+trap - EXIT

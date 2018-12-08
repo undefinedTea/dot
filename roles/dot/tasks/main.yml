@@ -1,0 +1,19 @@
+---
+- name: dot | establish .note directory
+  file: path=~/.note state=directory
+
+- name: dot | link
+  file: src={{ ansible_env.PWD }}/roles/dot/files/{{ item }}
+        path=~/{{ item }}
+        state=link
+        force=yes
+  loop:
+    - .console
+    - .expand
+    - .session
+    - .vim
+    - .visual
+    - .gitconfig
+    - .gitignore
+    - .tmux.conf
+    - .zshrc

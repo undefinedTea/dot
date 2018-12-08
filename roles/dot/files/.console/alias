@@ -1,0 +1,19 @@
+alias l='ls -l'
+alias ll='ls -la'
+
+alias ..='cd ..'
+
+alias please=sudo
+
+#session
+alias tma='tmux attach'
+alias tmi='tmux attach -t'
+
+alias tm='tmux new-session -s'
+
+alias tml='tmux ls'
+
+#wttr.in
+w() {
+  curl -H "Accept-Languge: en" wttr.in/"${1:-Helsinki}?q"
+}

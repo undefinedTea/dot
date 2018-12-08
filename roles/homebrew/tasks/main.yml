@@ -1,0 +1,17 @@
+---
+- name: homebrew | environment
+  get_url:
+    url=https://raw.githubusercontent.com/homebrew/install/master/install
+    dest=tmp/homebrew
+
+- name: homebrew | environment
+  command: ruby tmp/homebrew creates=/usr/local/bin/brew
+
+- name: homebrew | tap
+  homebrew_tap: tap=homebrew/bundle state=present
+
+- name: homebrew | prepare bundle file
+  template: dest=~/Library/Preferences/Brewfile src=brewfile
+
+- name: homebrew | bundle
+  command: brew bundle chdri="~/Library/Preferences"
