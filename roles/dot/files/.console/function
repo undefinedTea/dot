@@ -1,3 +1,16 @@
+yay() {
+  brew update
+  brew upgrade
+  
+  if [ "$1" = '-i' ]; then
+    softwareupdate --install --all
+  else
+    softwareupdate --list
+  fi
+
+  brew cleanup
+}
+
 visual() {
   local BASE16=~/.visual
   local SCHEME="$1"
