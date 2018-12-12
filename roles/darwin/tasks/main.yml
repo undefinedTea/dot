@@ -1,3 +1,6 @@
 ---
 - name: darwin | no dot file
   osx_defaults: domain=com.apple.desktopservices key=DSDontWriteUSBStores type=bool value=true
+
+- name: darwin | dissable automatic boot
+  command: please nvram AutoBoot=%00
