@@ -5,6 +5,8 @@ alias ..='cd ..'
 
 alias please=sudo
 
+alias :q=exit
+
 #session
 alias tma='tmux attach'
 alias tmi='tmux attach -t'
