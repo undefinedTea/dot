@@ -8,13 +8,3 @@
     - Hack-Italic.ttf
     - Hack-Regular.ttf
   become: true
-
-- name: linux | dependencie
-  git:
-    repo: 'https://aur.archlinux.org/yay.git'
-    dest: '{{ ansible_env.PWD }}/tmp/brew'
-
-- name: linux | brew
-  command: makepkg -si
-  args:
-    chdir: '{{ ansible_env.PWD }}/tmp/brew'
