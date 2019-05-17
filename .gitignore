@@ -1,2 +1,6 @@
 /roles/dot/files/.vim/autoload
 /roles/dot/files/.vim/plug
+
+/tmp/brew
+
+.vscode
