@@ -43,6 +43,15 @@ if ! type ansible &> /dev/null; then
   source tmp/ansible/hacking/env-setup &> /dev/null
 fi
 
-ansible-playbook -i inventory -K ${ROLE} "${OPTION[@]}" darwin.yml
+HOST_=$(uname)
+
+if [ "$HOST_" = 'Darwin' ]; then
+  ansible-playbook -i inventory -K ${ROLE} "${OPTION[@]}" darwin.yml
+elif [ "$HOST_" = 'Linux' ]; then
+  ansible-playbook -i inventory -K ${ROLE} "${OPTION[@]}" linux.yml
+else
+  echo "host not supported"
+  exit 1
+fi
 
 trap - EXIT

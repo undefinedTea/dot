@@ -1,0 +1,19 @@
+---
+- name: typeface
+  file: src={{ ansible_env.PWD }}/tmp/{{ item }}
+        path=/usr/share/fonts/{{ item }}
+        state=link
+        force=yes
+  loop:
+    - Hack-Italic.ttf
+    - Hack-Regular.ttf
+
+- name: dependencie
+  git:
+    repo: 'https://aur.archlinux.org/yay.git'
+    dest: '{{ ansible_env.PWD }}/tmp/brew'
+
+- name: brew
+  command: makepkg -si
+  args:
+    chdir: '{{ ansible_env.PWD }}/tmp/brew'
