@@ -1,15 +1,19 @@
-yay() {
-  brew update
-  brew upgrade
-  
-  if [ "$1" = '-i' ]; then
-    softwareupdate --install --all
-  else
-    softwareupdate --list
-  fi
+HOST_=$(uname)
 
-  brew cleanup
-}
+if [ "$HOST_" = 'Darwin' ]; then
+  yay() {
+    brew update
+    brew upgrade
+    
+    if [ "$1" = '-i' ]; then
+      softwareupdate --install --all
+    else
+      softwareupdate --list
+    fi
+
+    brew cleanup
+  }
+fi
 
 visual() {
   local BASE16=~/.visual
