@@ -40,7 +40,7 @@ while [ $# -gt 0 ]; do
 done
 
 if ! type ansible &> /dev/null; then
-  source tmp/ansible/hacking/env-setup &> /dev/null
+  echo "ansible is required*
 fi
 
 HOST_=$(uname)
