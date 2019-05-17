@@ -1,5 +1,5 @@
 ---
 - hosts: localhost
   roles:
-    - { role: typeface, tags: typeface }
+    - { role: linux, tags: linux }
     - { role: dot, tags: dot }
