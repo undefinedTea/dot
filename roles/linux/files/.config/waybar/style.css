@@ -1,4 +1,12 @@
-:root {
+* {
+  border: none;
+  border-radius: 0;
+
+  font-family: 'Dank Mono', Roboto, Verdana;
+  font-size: 13px;
+
+  min-height: 20px;
+
   --content: rgba(230, 233, 237, 1.00);
 
   /* --primary: rgba();
@@ -12,16 +20,6 @@
 
   --box: rgba(130, 160, 193, 0.70);
   --box_: rgba(180, 140, 173, 0.70);
-}
-
-* {
-  border: none;
-  border-radius: 0;
-
-  font-family: 'Dank Mono', Roboto, Verdana;
-  font-size: 13px;
-
-  min-height: 20px;
 }
 
 window#waybar {
