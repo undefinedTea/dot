@@ -1,13 +1,6 @@
 set $mod Mod4
 
-
-
-gaps inner 5
-gaps outer 11
-
-
-
-set $terminal --no-startup-id urxvt
+set $terminal urxvt
 
 set $workspace1 "1: system"
 set $workspace3 "3: general"
@@ -16,41 +9,16 @@ set $workspace7 "7: whitespace"
 set $workspace9 "9: twitch"
 set $workspace0 "10: session"
 
-
-
 output "*" background /home/thomas_janhonen/asset/desktop.jpg fill
-
-
 
 bindsym $mod+Return             exec $terminal
 #bindsym $mod+Shift+Return
 
-#bindsym $mod+space
-#bindsym $mod+Shift+space
-
 bindsym $mod+Escape             reload
 bindsym $mod+Shift+Escape       exit
 
-#bindsym $mod+BackSpace
-#bindsym $mod+Shift+BackSpace
-
-#bindsym $mod+slash              gaps inner current set 5; gaps outer current set 11
-
-#bindsym $mod+u                  gaps inner current plus 5
-#bindsym $mod+Shift+u            gaps inner current minus 5
-
-#bindsym $mod+minus              split horizontal
-#bindsym $mod+bar                split vertical
-#bindsym $mod+period             split toggle
-
-bindsym $mod+a                  layout toggle split
-
-
-
 bindsym $mod+q                  kill
 bindsym $mod+Shift+q            kill
-
-
 
 bindsym $mod+h                  focus left
 bindsym $mod+Shift+h            move left
@@ -64,19 +32,8 @@ bindsym $mod+Shift+k            move up
 bindsym $mod+l                  focus right
 bindsym $mod+Shift+l            move right
 
-
-
 bindsym $mod+f                  fullscreen toggle
 #bindsym $mod+f
-
-bindsym $mod+g                  exec --no-startup-id google-chrome-stable
-bindsym $mod+Shift+g            exec --no-startup-id google-chrome-stable --incognito
-assign [class="google-chrome"] $workspace3
-#for_window [class="google-chrome"] focus
-
-bindsym $mod+r                  exec $terminal -e ranger
-#bindsym $mod+Shift+r
-
 
 bindsym $mod+1                  workspace $workspace1
 bindsym $mod+Shift+1            move container to workspace $workspace1
@@ -96,23 +53,9 @@ bindsym $mod+Shift+9            move container to workspace $workspace9
 bindsym $mod+0                  workspace $workspace0
 bindsym $mod+Shift+0            move container to workspace $workspace0
 
-
-
-#bindsym $mod+F1
-#bindsym $mod+F3
-#bindsym $mod+F5
-#bindsym $mod+F7
-#bindsym $mod+F9
-#bindsym $mod+F11
-
-
-
 default_border                  none
 default_floating_border         none
 
 bar {
-  swaybar_command               waybar
-
-  #tray_output                   none
-  #strip_workspace_numbers       yes
+  swaybar_command waybar
 }
