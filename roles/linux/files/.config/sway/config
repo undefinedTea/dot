@@ -22,7 +22,7 @@ output "*" background /home/thomas_janhonen/asset/desktop.jpg fill
 
 
 
-bindsym $mod+Return             exec $term
+bindsym $mod+Return             exec $terminal
 #bindsym $mod+Shift+Return
 
 #bindsym $mod+space
