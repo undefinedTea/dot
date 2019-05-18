@@ -46,5 +46,13 @@ source ~/.console/visual
 #
 source ~/.console/export
 
+HOST_=$(uname)
+
+if [ "$HOST_" = 'Linux' ]; then
+  if [ $(tty) = /dev/tty1 ]]; then
+    exec sway
+  fi
+fi
+
 stty -ixon
 clear

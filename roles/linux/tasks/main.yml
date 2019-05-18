@@ -8,3 +8,13 @@
     - Hack-Italic.ttf
     - Hack-Regular.ttf
   become: true
+
+- name: linux | link
+  file: src={{ ansible_env.PWD }}/roles/linux/files/{{ item }}
+        path=~/{{ item }}
+        state=link
+        force=yes
+  loop:
+    - .config
+    - .Xresources
+    - asset
