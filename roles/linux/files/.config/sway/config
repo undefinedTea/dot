@@ -113,6 +113,6 @@ default_floating_border         none
 bar {
   swaybar_command               waybar
 
-  tray_output                   none
-  strip_workspace_numbers       yes
+  #tray_output                   none
+  #strip_workspace_numbers       yes
 }
