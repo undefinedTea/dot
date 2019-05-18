@@ -23,7 +23,7 @@ window#waybar {
 }
 
 #workspaces button {
-  margin: auto 5px;
+  margin: 0 5px;
   padding: 0 5px;
 
   border: 1px solid rgba(130, 160, 193, 1.00);
@@ -46,7 +46,7 @@ window#waybar {
 }
 
 #network, #battery, #clock {
-  margin: auto 5px;
+  margin: 0 5px;
   padding: 0 5px;
 }
 
