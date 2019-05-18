@@ -14,7 +14,7 @@ window#waybar {
 
 #workspaces {
   margin: 5px;
-  padding: auto;
+  padding: 0;
 
   border: none;
   border-radius: 0;
@@ -24,7 +24,7 @@ window#waybar {
 
 #workspaces button {
   margin: auto 5px;
-  padding: auto 5px;
+  padding: 0 5px;
 
   border: 1px solid rgba(130, 160, 193, 1.00);
   border-radius: 0;
@@ -47,7 +47,7 @@ window#waybar {
 
 #network, #battery, #clock {
   margin: auto 5px;
-  padding: auto 5px;
+  padding: 0 5px;
 }
 
 #network {
