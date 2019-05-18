@@ -1,0 +1,105 @@
+:root {
+  --content: rgba(230, 233, 237, 1.00);
+
+  /* --primary: rgba();
+  --secondary: rgba();
+  --tertiary: rgba(); */
+
+  --accent: rgba(143, 187, 187, 1.00);
+
+  --line: rgba(130, 160, 193, 1.00);
+  --line_: rgba(180, 140, 173, 1.00);
+
+  --box: rgba(130, 160, 193, 0.70);
+  --box_: rgba(180, 140, 173, 0.70);
+}
+
+* {
+  border: none;
+  border-radius: 0;
+
+  font-family: 'Dank Mono', Roboto, Verdana;
+  font-size: 13px;
+
+  min-height: 20px;
+}
+
+window#waybar {
+  background: rgba(45, 51, 63, 0.70);
+}
+
+#workspaces {
+  margin: 5px;
+  padding: auto;
+
+  border: none;
+  border-radius: 0;
+
+  background: transparent;
+}
+
+#workspaces button {
+  margin: auto 5px;
+  padding: auto 5px;
+
+  border: 1px solid var(--line);
+  border-radius: 0;
+
+  box-shadow: 3px 3px 3px 0 var(--box);
+
+  background: none;
+  color: var(--content);
+}
+
+#workspaces button.focused {
+  border: 1px solid var(--line_);
+  border-radius: 0;
+
+  box-shadow: 3px 3px 3px 0 var(--box_);
+
+  background: none;
+  color: var(--content);
+}
+
+#network, #battery, #clock {
+  margin: auto 5px;
+  padding: auto 5px;
+}
+
+#network {
+  border: 1px solid var(--line);
+  border-radius: 0;
+
+  box-shadow: 3px 3px 3px 0 var(--box);
+
+  background: none;
+  color: var(--content);
+}
+
+#battery {
+  border: 1px solid var(--line);
+  border-radius: 0;
+
+  box-shadow: 3px 3px 3px 0 var(--box);
+
+  background: none;
+  color: var(--content);
+}
+
+#battery.warning {
+  color: var(--content);
+}
+
+#battery.critical {
+  color: var(--content);
+}
+
+#clock {
+  border: 1px solid var(--line);
+  border-radius: 0;
+
+  box-shadow: 3px 3px 3px 0 var(--box);
+
+  background: none;
+  color: var(--content);
+}

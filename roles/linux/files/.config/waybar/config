@@ -1,0 +1,40 @@
+{
+  "layer": "top",
+
+  "height": 30,
+
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": [],
+  "modules-right": ["network", "battery", "clock"],
+
+  "sway/workspaces": {
+    "all-outputs": false,
+    "format": "{name}"
+  },
+
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+
+  "network": {
+    "format-wifi": "{essid}",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+    "format-linked": "{ifname}",
+
+    "format-disconnected": "disconnected"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+
+    "format": "{capacity}%",
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{%r}"
+  },
+}
