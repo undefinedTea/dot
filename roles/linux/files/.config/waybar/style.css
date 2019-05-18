@@ -6,20 +6,6 @@
   font-size: 13px;
 
   min-height: 20px;
-
-  --content: rgba(230, 233, 237, 1.00);
-
-  /* --primary: rgba();
-  --secondary: rgba();
-  --tertiary: rgba(); */
-
-  --accent: rgba(143, 187, 187, 1.00);
-
-  --line: rgba(130, 160, 193, 1.00);
-  --line_: rgba(180, 140, 173, 1.00);
-
-  --box: rgba(130, 160, 193, 0.70);
-  --box_: rgba(180, 140, 173, 0.70);
 }
 
 window#waybar {
@@ -40,23 +26,23 @@ window#waybar {
   margin: auto 5px;
   padding: auto 5px;
 
-  border: 1px solid var(--line);
+  border: 1px solid rgba(130, 160, 193, 1.00);
   border-radius: 0;
 
-  box-shadow: 3px 3px 3px 0 var(--box);
+  box-shadow: 3px 3px 3px 0 rgba(130, 160, 193, 0.70);
 
   background: none;
-  color: var(--content);
+  color: rgba(230, 233, 237, 1.00);
 }
 
 #workspaces button.focused {
-  border: 1px solid var(--line_);
+  border: 1px solid rgba(180, 140, 173, 1.00);
   border-radius: 0;
 
-  box-shadow: 3px 3px 3px 0 var(--box_);
+  box-shadow: 3px 3px 3px 0 rgba(180, 140, 173, 0.70);
 
   background: none;
-  color: var(--content);
+  color: rgba(230, 233, 237, 1.00);
 }
 
 #network, #battery, #clock {
@@ -65,39 +51,39 @@ window#waybar {
 }
 
 #network {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(130, 160, 193, 1.00);
   border-radius: 0;
 
-  box-shadow: 3px 3px 3px 0 var(--box);
+  box-shadow: 3px 3px 3px 0 rgba(130, 160, 193, 0.70);
 
   background: none;
-  color: var(--content);
+  color: rgba(230, 233, 237, 1.00);
 }
 
 #battery {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(130, 160, 193, 1.00);
   border-radius: 0;
 
-  box-shadow: 3px 3px 3px 0 var(--box);
+  box-shadow: 3px 3px 3px 0 rgba(130, 160, 193, 0.70);
 
   background: none;
-  color: var(--content);
+  color: rgba(230, 233, 237, 1.00);
 }
 
 #battery.warning {
-  color: var(--content);
+  color: rgba(230, 233, 237, 1.00);
 }
 
 #battery.critical {
-  color: var(--content);
+  color: rgba(230, 233, 237, 1.00);
 }
 
 #clock {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(130, 160, 193, 1.00);
   border-radius: 0;
 
-  box-shadow: 3px 3px 3px 0 var(--box);
+  box-shadow: 3px 3px 3px 0 rgba(130, 160, 193, 0.70);
 
   background: none;
-  color: var(--content);
+  color: rgba(230, 233, 237, 1.00);
 }
