@@ -30,11 +30,11 @@
       "critical": 15
     },
 
-    "format": "{capacity}%",
+    "format": "{capacity}%"
   },
 
   "clock": {
     "interval": 1,
     "format": "{%r}"
-  },
+  }
 }
