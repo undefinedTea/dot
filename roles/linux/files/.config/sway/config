@@ -34,20 +34,14 @@ bindsym $mod+Shift+Escape       exit
 #bindsym $mod+BackSpace
 #bindsym $mod+Shift+BackSpace
 
-bindsym $mod+bracketleft        resize grow width 15px
-bindsym $mod+Shift+bracketleft  resize grow height 15px
+#bindsym $mod+slash              gaps inner current set 5; gaps outer current set 11
 
-bindsym $mod+bracketright       resize shrink width 15px
-bindsym $mod+Shift+bracketright resize shrink height 15px
+#bindsym $mod+u                  gaps inner current plus 5
+#bindsym $mod+Shift+u            gaps inner current minus 5
 
-bindsym $mod+slash              gaps inner current set 5; gaps outer current set 11
-
-bindsym $mod+u                  gaps inner current plus 5
-bindsym $mod+Shift+u            gaps inner current minus 5
-
-bindsym $mod+minus              split horizontal
-bindsym $mod+bar                split vertical
-bindsym $mod+period             split toggle
+#bindsym $mod+minus              split horizontal
+#bindsym $mod+bar                split vertical
+#bindsym $mod+period             split toggle
 
 bindsym $mod+a                  layout toggle split
 
