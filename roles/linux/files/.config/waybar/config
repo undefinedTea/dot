@@ -35,6 +35,6 @@
 
   "clock": {
     "interval": 1,
-    "format": "{%r}"
+    "format": "{:%r}"
   }
 }
