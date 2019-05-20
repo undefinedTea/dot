@@ -1,7 +1,8 @@
-URxvt*font:       xft:Dank Mono:pixelsize=15
-URxvt*saveLines:  3000
-URxvt*termName:   rxvt-unicode
+URxvt*font:           xft:Dank Mono:pixelsize=15
+URxvt*saveLines:      3000
+URxvt*termName:       rxvt-unicode
 
-URxvt*scrollBar:  false
+URxvt*scrollBar:      false
+URxvt*internalBorder: 5
 
-URxvt*depth:      32
+URxvt*depth:          32
