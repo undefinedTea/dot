@@ -3,6 +3,7 @@ URxvt*saveLines:      3000
 URxvt*termName:       rxvt-unicode
 
 URxvt*scrollBar:      false
-URxvt*internalBorder: 5
+URxvt*internalBorder: 13
 
 URxvt*depth:          32
+URxvt*background:     rgba:2d00/2d00/2d00/c900
