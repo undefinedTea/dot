@@ -12,6 +12,21 @@ if [ "$HOST_" = 'Darwin' ]; then
     fi
 
     brew cleanup
+
+    echo 'cleanup complete 🛁'
+  }
+
+  nsa() {
+    find . -name '.DS_Store' -type f -delete
+
+    echo 'purge complete 👾'
+  }
+
+  uav() {
+    yay
+    nsa
+
+    echo 'process complete 🦄'
   }
 fi
 

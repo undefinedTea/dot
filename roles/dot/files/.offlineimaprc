@@ -1,0 +1,23 @@
+[general]
+accounts = undefined
+
+[Account undefined]
+localrepository = undefined-local
+remoterepository = undefined-remote
+
+[Repository undefined-local]
+type = Maildir
+localfolders = ~/.mail
+
+[Repository undefined-remote]
+type = IMAP
+remoteport = 1143
+remotehost = 127.0.0.1
+remoteuser = hello@undefinedtea.dev
+remotepass = 2eP4EZaokc5GBRIkWNRv7g
+holdconnectionopen = true
+
+expunge = true
+#folderfilter = lambda foldername: foldername in ['INBOX', 'Archive', 'Sent']
+
+ssl = no

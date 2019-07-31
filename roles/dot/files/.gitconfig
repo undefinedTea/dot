@@ -4,6 +4,9 @@
 
   signingkey = hello@thomasjanhonen.name
 
+[merge]
+  conflictStyle = diff3
+
 [core]
   editor = vim
   ignorecase = false
