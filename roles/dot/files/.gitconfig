@@ -26,7 +26,8 @@
   ai = add --interactive
 
   ### :: LOG
-  l = log --pretty=format:'%C(magenta)%h%C(reset) %C(cyan)%G?%C(reset) %C(white)%s%C(reset)' --graph --decorate
+  l = log --pretty=format:'%C(magenta)%h%C(reset) %C(cyan)%G?%C(reset)%C(yellow)%d%C(reset) %C(white)%s%C(reset)' --graph
+  ll = log --pretty=format:'%C(magenta)%h%C(reset) %C(cyan)%G?%C(reset)%C(yellow)%d%C(reset) %C(white)%s%C(reset)%n%C(green)%an %GF%C(reset)%n%C(green)%cD%C(reset)%n %n%C(white)%b%C(reset)%n' --graph
 
   ### :: WHAT
   d = diff --ignore-blank-lines --color-words
