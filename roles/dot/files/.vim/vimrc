@@ -251,6 +251,27 @@ let g:indentLine_char='┆'
 let g:indentLine_conceallevel=1
 let g:indentLine_setConceal=0
 
+let g:projectionist_heuristics = {
+  \   '*': {
+  \     '*.js': {
+  \       'alternate': '{dirname}/{basename}.test.js',
+  \       'type': 'source'
+  \     },
+  \     '*.js': {
+  \       'alternate': '{dirname}/{basename}.js',
+  \       'type': 'test'
+  \     },
+  \     '*.ts': {
+  \       'alternate': '{dirname}/{basename}.test.ts',
+  \       'type': 'source'
+  \     },
+  \     '*.ts': {
+  \       'alternate': '{dirname}/{basename}.ts',
+  \       'type': 'test'
+  \     }
+  \   }
+  \ }
+
 function s:setScheme()
   let s:data_file = expand('~/.vim/base16')
   if filereadable(s:data_file)
