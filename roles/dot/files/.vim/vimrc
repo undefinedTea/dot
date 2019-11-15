@@ -257,7 +257,7 @@ let g:projectionist_heuristics = {
   \       'alternate': '{dirname}/{basename}.test.js',
   \       'type': 'source'
   \     },
-  \     '*.js': {
+  \     '*.test.js': {
   \       'alternate': '{dirname}/{basename}.js',
   \       'type': 'test'
   \     },
@@ -265,7 +265,7 @@ let g:projectionist_heuristics = {
   \       'alternate': '{dirname}/{basename}.test.ts',
   \       'type': 'source'
   \     },
-  \     '*.ts': {
+  \     '*.test.ts': {
   \       'alternate': '{dirname}/{basename}.ts',
   \       'type': 'test'
   \     }
