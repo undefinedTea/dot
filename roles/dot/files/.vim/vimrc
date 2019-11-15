@@ -243,7 +243,7 @@ let g:javascript_conceal_underscore_arrow_function='⇥ '
 
 let g:jsx_ext_required=0
 
-let g:indentLine_fileType=['js', 'javascript.jsx', 'json', 'html']
+let g:indentLine_fileType=['js', 'javascript.ts', 'javascript.jsx', 'json', 'html']
 let g:indentLine_fileTypeExclude=['help']
 
 let g:indentLine_char='┆'
