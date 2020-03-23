@@ -1,8 +1,8 @@
 [user]
   name = Thomas Janhonen
-  email = hello@thomasjanhonen.name
+  email = hello@undefinedtea.dev
 
-  signingkey = hello@thomasjanhonen.name
+  signingkey = hello@undefinedtea.dev
 
 [merge]
   conflictStyle = diff3
