@@ -18,3 +18,12 @@
     - .config
     - .Xresources
     - asset
+
+- name: linux | bin
+  file: src={{ ansible_env.PWD }}/roles/linux/files/bin/{{ item }}
+        path=~/{{ item }}
+        state=link
+        force=yes
+  loop:
+    - lock
+  become: true
