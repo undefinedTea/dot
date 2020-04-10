@@ -15,7 +15,7 @@ set $workspace7 "7: whitespace"
 set $workspace9 "9: twitch"
 set $workspace0 "10: session"
 
-output "*" background /home/thomas_janhonen/asset/desktop.jpg fill
+output "*" background /home/thomas_janhonen/.visual/terminal/terminal.jpg fill
 
 bindsym $mod+Return             exec $terminal
 #bindsym $mod+Shift+Return
