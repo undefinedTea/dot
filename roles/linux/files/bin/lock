@@ -16,7 +16,7 @@ import sys, json
 data = json.load(sys.stdin)
 
 for output in data:
-  print output["name"]
+  print(output["name"])
 ')
 while read -r line; do
   output_+=($line)
