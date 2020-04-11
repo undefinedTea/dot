@@ -30,7 +30,7 @@ do
 
   lock_parameter=("--no-unlock-indicator" "--image" "${output_[$i]}:${image_[$i]}" "--hide-keyboard-layout")
   convert "${image_[$i]}" "${distort[@]}" \
-    -annotate "${lock_composit}" -gravity center -composite "${image_[$i]}"
+    "${lock_composit}" -gravity center -composite "${image_[$i]}"
 done
 
 if ! "${lock_command[@]}" "${lock_parameter[@]}" &> /dev/null; then
