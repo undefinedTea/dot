@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set --eCu
+set -eCu
 
 lock_command=(swaylock)
 lock_composit=/home/thomas_janhonen/asset/composit.png
