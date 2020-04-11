@@ -21,7 +21,7 @@
 
 - name: linux | bin
   file: src={{ ansible_env.PWD }}/roles/linux/files/bin/{{ item }}
-        path=~/{{ item }}
+        path=/usr/bin/{{ item }}
         state=link
         force=yes
   loop:
