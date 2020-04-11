@@ -2,6 +2,7 @@
 - name: application | link profile to terminal
   file: src={{ item }}
         dest=~/Library/Application Support/iTerm2/DynamicProfiles/{{ item | basename }}
-        state=link 
+        state=link
+        force=yes 
   loop:
     - 'ruby.json'
