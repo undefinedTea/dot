@@ -86,7 +86,6 @@ else
   put_template_custom 12 ";7"
 fi
 
-# clean up
 unset -f put_template
 unset -f put_template_var
 unset -f put_template_custom

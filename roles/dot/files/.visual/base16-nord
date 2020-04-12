@@ -43,7 +43,6 @@ else
   put_template_custom() { printf '\033]%s%s\033\\' $@; }
 fi
 
-# 16 color space
 put_template 0  $color00
 put_template 1  $color01
 put_template 2  $color02
@@ -61,7 +60,6 @@ put_template 13 $color13
 put_template 14 $color14
 put_template 15 $color15
 
-# 256 color space
 put_template 16 $color16
 put_template 17 $color17
 put_template 18 $color18
@@ -70,26 +68,24 @@ put_template 20 $color20
 put_template 21 $color21
 
 if [ -n "$ITERM_SESSION_ID" ]; then
-  # iTerm2 proprietary escape codes
-  put_template_custom Pg E5E9F0 # foreground
-  put_template_custom Ph 2E3440 # background
-  put_template_custom Pi E5E9F0 # bold color
-  put_template_custom Pj 434C5E # selection color
-  put_template_custom Pk E5E9F0 # selected text color
-  put_template_custom Pl E5E9F0 # cursor
-  put_template_custom Pm 2E3440 # cursor text
+  put_template_custom Pg E5E9F0
+  put_template_custom Ph 2E3440
+  put_template_custom Pi E5E9F0
+  put_template_custom Pj 434C5E
+  put_template_custom Pk E5E9F0
+  put_template_custom Pl E5E9F0
+  put_template_custom Pm 2E3440
 else
   put_template_var 10 $color_foreground
   if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]; then
     put_template_var 11 $color_background
     if [ "${TERM%%-*}" = "rxvt" ]; then
-      put_template_var 708 $color_background # internal border (rxvt)
+      put_template_var 708 $color_background
     fi
   fi
-  put_template_custom 12 ";7" # cursor (reverse video)
+  put_template_custom 12 ";7"
 fi
 
-# clean up
 unset -f put_template
 unset -f put_template_var
 unset -f put_template_custom

@@ -33,6 +33,7 @@ let g:base16_gui0E = "A3BE8C"
 let s:gui0F        = "B48EAD"
 let g:base16_gui0F = "B48EAD"
 
+" Terminal color definitions
 let s:cterm00        = "00"
 let g:base16_cterm00 = "00"
 let s:cterm03        = "08"
@@ -53,32 +54,62 @@ let s:cterm0D        = "04"
 let g:base16_cterm0D = "04"
 let s:cterm0E        = "05"
 let g:base16_cterm0E = "05"
-if exists('base16colorspace') && base16colorspace == "256"
-  let s:cterm01        = "18"
-  let g:base16_cterm01 = "18"
-  let s:cterm02        = "19"
-  let g:base16_cterm02 = "19"
-  let s:cterm04        = "20"
-  let g:base16_cterm04 = "20"
-  let s:cterm06        = "21"
-  let g:base16_cterm06 = "21"
-  let s:cterm09        = "16"
-  let g:base16_cterm09 = "16"
-  let s:cterm0F        = "17"
-  let g:base16_cterm0F = "17"
-else
-  let s:cterm01        = "10"
-  let g:base16_cterm01 = "10"
-  let s:cterm02        = "11"
-  let g:base16_cterm02 = "11"
-  let s:cterm04        = "12"
-  let g:base16_cterm04 = "12"
-  let s:cterm06        = "13"
-  let g:base16_cterm06 = "13"
-  let s:cterm09        = "09"
-  let g:base16_cterm09 = "09"
-  let s:cterm0F        = "14"
-  let g:base16_cterm0F = "14"
+let s:cterm01        = "18"
+let g:base16_cterm01 = "18"
+let s:cterm02        = "19"
+let g:base16_cterm02 = "19"
+let s:cterm04        = "20"
+let g:base16_cterm04 = "20"
+let s:cterm06        = "21"
+let g:base16_cterm06 = "21"
+let s:cterm09        = "16"
+let g:base16_cterm09 = "16"
+let s:cterm0F        = "17"
+let g:base16_cterm0F = "17"
+
+" Neovim terminal colours
+if has("nvim")
+  let g:terminal_color_0 =  "#2E3440"
+  let g:terminal_color_1 =  "#88C0D0"
+  let g:terminal_color_2 =  "#BF616A"
+  let g:terminal_color_3 =  "#5E81AC"
+  let g:terminal_color_4 =  "#EBCB8B"
+  let g:terminal_color_5 =  "#A3BE8C"
+  let g:terminal_color_6 =  "#D08770"
+  let g:terminal_color_7 =  "#E5E9F0"
+  let g:terminal_color_8 =  "#4C566A"
+  let g:terminal_color_9 =  "#88C0D0"
+  let g:terminal_color_10 = "#BF616A"
+  let g:terminal_color_11 = "#5E81AC"
+  let g:terminal_color_12 = "#EBCB8B"
+  let g:terminal_color_13 = "#A3BE8C"
+  let g:terminal_color_14 = "#D08770"
+  let g:terminal_color_15 = "#8FBCBB"
+  let g:terminal_color_background = g:terminal_color_0
+  let g:terminal_color_foreground = g:terminal_color_5
+  if &background == "light"
+    let g:terminal_color_background = g:terminal_color_7
+    let g:terminal_color_foreground = g:terminal_color_2
+  endif
+elseif has("terminal")
+  let g:terminal_ansi_colors = [
+        \ "#2E3440",
+        \ "#88C0D0",
+        \ "#BF616A",
+        \ "#5E81AC",
+        \ "#EBCB8B",
+        \ "#A3BE8C",
+        \ "#D08770",
+        \ "#E5E9F0",
+        \ "#4C566A",
+        \ "#88C0D0",
+        \ "#BF616A",
+        \ "#5E81AC",
+        \ "#EBCB8B",
+        \ "#A3BE8C",
+        \ "#D08770",
+        \ "#8FBCBB",
+        \ ]
 endif
 
 " Theme setup
@@ -87,9 +118,10 @@ syntax reset
 let g:colors_name = "base16-nord"
 
 " Highlighting function
+" Optional variables are attributes and guisp
 function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, ...)
-	let a:attr = get(a:, 1, "")
-	let a:guisp = get(a:, 2, "")
+  let l:attr = get(a:, 1, "")
+  let l:guisp = get(a:, 2, "")
 
   if a:guifg != ""
     exec "hi " . a:group . " guifg=#" . a:guifg
@@ -103,11 +135,11 @@ function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, ...)
   if a:ctermbg != ""
     exec "hi " . a:group . " ctermbg=" . a:ctermbg
   endif
-  if a:attr != ""
-    exec "hi " . a:group . " gui=" . a:attr . " cterm=" . a:attr
+  if l:attr != ""
+    exec "hi " . a:group . " gui=" . l:attr . " cterm=" . l:attr
   endif
-  if a:guisp != ""
-    exec "hi " . a:group . " guisp=#" . a:guisp
+  if l:guisp != ""
+    exec "hi " . a:group . " guisp=#" . l:guisp
   endif
 endfunction
 

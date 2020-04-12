@@ -33,6 +33,7 @@ let g:base16_gui0E = "aa17e6"
 let s:gui0F        = "e013d0"
 let g:base16_gui0F = "e013d0"
 
+" Terminal color definitions
 let s:cterm00        = "00"
 let g:base16_cterm00 = "00"
 let s:cterm03        = "08"
@@ -53,33 +54,18 @@ let s:cterm0D        = "04"
 let g:base16_cterm0D = "04"
 let s:cterm0E        = "05"
 let g:base16_cterm0E = "05"
-if exists("base16colorspace") && base16colorspace == "256"
-  let s:cterm01        = "18"
-  let g:base16_cterm01 = "18"
-  let s:cterm02        = "19"
-  let g:base16_cterm02 = "19"
-  let s:cterm04        = "20"
-  let g:base16_cterm04 = "20"
-  let s:cterm06        = "21"
-  let g:base16_cterm06 = "21"
-  let s:cterm09        = "16"
-  let g:base16_cterm09 = "16"
-  let s:cterm0F        = "17"
-  let g:base16_cterm0F = "17"
-else
-  let s:cterm01        = "10"
-  let g:base16_cterm01 = "10"
-  let s:cterm02        = "11"
-  let g:base16_cterm02 = "11"
-  let s:cterm04        = "12"
-  let g:base16_cterm04 = "12"
-  let s:cterm06        = "13"
-  let g:base16_cterm06 = "13"
-  let s:cterm09        = "09"
-  let g:base16_cterm09 = "09"
-  let s:cterm0F        = "14"
-  let g:base16_cterm0F = "14"
-endif
+let s:cterm01        = "18"
+let g:base16_cterm01 = "18"
+let s:cterm02        = "19"
+let g:base16_cterm02 = "19"
+let s:cterm04        = "20"
+let g:base16_cterm04 = "20"
+let s:cterm06        = "21"
+let g:base16_cterm06 = "21"
+let s:cterm09        = "16"
+let g:base16_cterm09 = "16"
+let s:cterm0F        = "17"
+let g:base16_cterm0F = "17"
 
 " Neovim terminal colours
 if has("nvim")
@@ -156,6 +142,7 @@ function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, ...)
     exec "hi " . a:group . " guisp=#" . l:guisp
   endif
 endfunction
+
 
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
   call g:Base16hi(a:group, a:guifg, a:guibg, a:ctermfg, a:ctermbg, a:attr, a:guisp)
