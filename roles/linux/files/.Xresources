@@ -4,5 +4,3 @@ URxvt.termName:       rxvt-unicode
 
 URxvt.scrollBar:      false
 URxvt.internalBorder: 13
-
-URxvt.depth:          32
