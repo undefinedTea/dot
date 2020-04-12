@@ -16,6 +16,7 @@
         force=yes
   loop:
     - .config
+    - .theme
     - .Xresources
     - asset
 
