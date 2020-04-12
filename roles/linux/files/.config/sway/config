@@ -7,6 +7,7 @@ smart_gaps                      on
 smart_gaps                      inverse_outer
 
 set $terminal --no-startup-id urxvt
+set $browse brave
 
 set $workspace1 "1: system"
 set $workspace3 "3: general"
@@ -65,13 +66,17 @@ bindsym $mod+Shift+l            move right
 bindsym $mod+f                  fullscreen toggle
 #bindsym $mod+f
 
-bindsym $mod+g                  exec --no-startup-id google-chrome-stable
-bindsym $mod+Shift+g            exec --no-startup-id google-chrome-stable --incognito
+bindsym $mod+g                  exec --no-startup-id $browse
+bindsym $mod+Shift+g            exec --no-startup-id $browse --incognito
 assign [class="Google-chrome"] $workspace3
 #for_window [class="Google-chrome"] focus
+assign [class="Brave"] $workspace3
+#for_window [class="Brave"] focus
 
 bindsym $mod+r                  exec $terminal -e ranger
 #bindsym $mod+Shift+r
+
+bindsym $mod+p                  exec $terminal -e lock
 
 bindsym $mod+1                  workspace $workspace1
 bindsym $mod+Shift+1            move container to workspace $workspace1
