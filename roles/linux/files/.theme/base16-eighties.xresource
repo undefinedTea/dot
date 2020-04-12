@@ -23,8 +23,9 @@ URxvt.internalBorder: 13
 #define base0F #d27b53
 
 *foreground:          base05
-URxvt.depth:          32
-*background:          rgba:2d00/2d00/2d00/c900
+! URxvt.depth:          32
+! *background:          rgba:2d00/2d00/2d00/c900
+*background:          base00
 *cursorColor:         base05
 
 *color0:              base00
@@ -44,3 +45,10 @@ URxvt.depth:          32
 *color13:             base06
 *color14:             base0F
 *color15:             base07
+
+*color16:             base09
+*color17:             base0F
+*color18:             base01
+*color19:             base02
+*color20:             base04
+*color21:             base06

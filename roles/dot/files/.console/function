@@ -65,6 +65,14 @@ visual() {
     FILE="$BASE16/base16-$SCHEME"
     if [[ -e "$FILE" ]]; then
       echo "$SCHEME" >! ~/.vim/base16
+
+      if [ "$HOST_" = 'Linux' ]; then
+        LINUXFILE="$LINUX/base16-$SCHEME.xresource"
+        if [[ -e "$LINUXFILE" ]]; then
+          cat $LINUXFILE >! ~/.Xresources
+        fi
+      fi
+
       source "$FILE"
       
       if [ -n "$TMUX" ]; then
