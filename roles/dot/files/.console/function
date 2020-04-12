@@ -65,7 +65,7 @@ visual() {
     FILE="$BASE16/base16-$SCHEME"
     if [[ -e "$FILE" ]]; then
       echo "$SCHEME" >! ~/.vim/base16
-      cat $FILE >! ~/.Xresources
+      source "$FILE"
       
       if [ -n "$TMUX" ]; then
         local MAIN=$(ack color00= "$FILE" | cut -d \" -f2 | sed -e 's#/##g')
