@@ -6,4 +6,3 @@ URxvt.scrollBar:      false
 URxvt.internalBorder: 13
 
 URxvt.depth:          32
-URxvt.background:     rgba:2d00/2d00/2d00/e800

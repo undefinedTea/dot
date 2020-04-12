@@ -76,7 +76,7 @@ assign [class="Brave"] $workspace3
 bindsym $mod+r                  exec $terminal -e ranger
 #bindsym $mod+Shift+r
 
-bindsym $mod+p                  exec $terminal -e lock
+bindsym $mod+p                  exec lock
 
 bindsym $mod+1                  workspace $workspace1
 bindsym $mod+Shift+1            move container to workspace $workspace1
