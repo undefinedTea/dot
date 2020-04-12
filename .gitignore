@@ -9,5 +9,3 @@
 !roles/linux/files/.config/ranger
 
 .vscode
-
-/roles/linux/files/.Xresources

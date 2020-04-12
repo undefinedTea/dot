@@ -44,26 +44,29 @@ visual() {
     echo 'set visual mode'
     ;;
   *)
-    if [ "$HOST_" = 'Darwin' ]; then
-      FILE="$BASE16/base16-$SCHEME"
-      if [[ -e "$FILE" ]]; then
-        echo "$SCHEME" >! ~/.vim/base16
-        source "$FILE"
-      fi
-    fi
+    # if [ "$HOST_" = 'Darwin' ]; then
+    #   FILE="$BASE16/base16-$SCHEME"
+    #   if [[ -e "$FILE" ]]; then
+    #     echo "$SCHEME" >! ~/.vim/base16
+    #     source "$FILE"
+    #   fi
+    # fi
 
-    if [ "$HOST_" = 'Linux' ]; then
-      FILE="$LINUX/base16-$SCHEME.xresource"
-      if [[ -e "$FILE" ]]; then
-        echo "$SCHEME" >! ~/.vim/base16
-        cat $FILE >! ~/.Xresources
+    # if [ "$HOST_" = 'Linux' ]; then
+    #   FILE="$LINUX/base16-$SCHEME.xresource"
+    #   if [[ -e "$FILE" ]]; then
+    #     echo "$SCHEME" >! ~/.vim/base16
+    #     cat $FILE >! ~/.Xresources
 
-        xrdb -load ~/.Xresources
-      fi
-    fi
+    #     xrdb -load ~/.Xresources
+    #   fi
+    # fi
 
     FILE="$BASE16/base16-$SCHEME"
     if [[ -e "$FILE" ]]; then
+      echo "$SCHEME" >! ~/.vim/base16
+      cat $FILE >! ~/.Xresources
+      
       if [ -n "$TMUX" ]; then
         local MAIN=$(ack color00= "$FILE" | cut -d \" -f2 | sed -e 's#/##g')
         local ALTERNATE=$(ack color18= "$FILE" | cut -d \" -f2 | sed -e 's#/##g')
