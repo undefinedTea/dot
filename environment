@@ -2,6 +2,14 @@
 
 set -e
 
+RESET='\033[0m'
+GREY='\033[2m'
+CYAN='\033[96m'
+MAGENTA='\033[95m'
+YELLOW='\033[93m'
+
+LINE='\033[4m'
+
 usage() {
   echo "./environment [option] [role...]"
   echo ""
@@ -10,11 +18,11 @@ usage() {
   echo "-d / --dry-run      validate"
   echo "-s / --single       one runbook task at the time"
   echo ""
-  echo "\033[2m_any_ further option as --xxx is provided to ansible\033[0m"
+  echo -e "${GREY}_any_ further option as --xxx is provided to ansible${RESET}"
   echo ""
   echo "where [role] is:"
   for ROLE in $(ls roles); do
-    echo "  \033[4m$ROLE\033[0m - $(cat roles/$ROLE/description)"
+    echo -e "  ${MAGENTA}${LINE}$ROLE${RESET} - $(cat roles/$ROLE/description)"
   done
 }
 
