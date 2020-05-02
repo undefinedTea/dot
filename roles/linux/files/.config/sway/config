@@ -73,10 +73,12 @@ assign [class="Google-chrome"] $workspace3
 assign [class="Brave"] $workspace3
 #for_window [class="Brave"] focus
 
-bindsym $mod+r                  exec $terminal -e ranger
+bindsym $mod+r                  exec --no-startup-id $terminal -e ranger
 #bindsym $mod+Shift+r
 
 bindsym $mod+p                  exec lock
+
+bindsym $mod+s                  exec --no-startup-id $terminal -e ncmpcpp
 
 bindsym $mod+1                  workspace $workspace1
 bindsym $mod+Shift+1            move container to workspace $workspace1
