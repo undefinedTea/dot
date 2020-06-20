@@ -17,6 +17,12 @@ set $workspace9 "9: twitch"
 set $workspace0 "10: session"
 
 output "*" background /home/thomas_janhonen/.visual/terminal/terminal.jpg fill
+output eDP-1 mode 2560x1440
+output DP-5 mode 3440x1440@120Hz
+
+set $artemis eDP-1
+bindswitch --reload --locked lid:on output $artemis disable
+bindswitch --reload --locked lid:off output $artemis enable
 
 bindsym $mod+Return             exec $terminal
 #bindsym $mod+Shift+Return
@@ -117,7 +123,15 @@ input "1739:0:Synaptics_TM3288-011" {
   natural_scroll  enabled
 }
 
+input "1133:45081:MX_Master_2S_Mouse" {
+  natural_scroll  enabled
+}
+
 focus_follows_mouse             no
+
+input type:keyboard {
+  xkb_options     ctrl:nocaps
+}
 
 default_border                  none
 default_floating_border         none
