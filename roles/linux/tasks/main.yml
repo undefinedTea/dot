@@ -27,4 +27,5 @@
         force=yes
   loop:
     - lock
+    - op
   become: true
