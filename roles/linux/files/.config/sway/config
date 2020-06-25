@@ -79,6 +79,8 @@ assign [class="Google-chrome"] $workspace3
 assign [class="Brave"] $workspace3
 #for_window [class="Brave"] focus
 
+bindsym $mod+c                  exec --no-startup-id code
+
 bindsym $mod+r                  exec --no-startup-id $terminal -e ranger
 #bindsym $mod+Shift+r
 
