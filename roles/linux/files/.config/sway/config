@@ -74,12 +74,13 @@ bindsym $mod+f                  fullscreen toggle
 
 bindsym $mod+g                  exec --no-startup-id $browse
 bindsym $mod+Shift+g            exec --no-startup-id $browse --incognito
-assign [class="Google-chrome"] $workspace3
-#for_window [class="Google-chrome"] focus
-assign [class="Brave"] $workspace3
+#assign [class="Brave"] $workspace3
 #for_window [class="Brave"] focus
 
 bindsym $mod+c                  exec --no-startup-id code
+bindsym $mod+Shift+c            exec --no-startup-id slack
+
+#bindsym $mod+i                  exec --no-startup-id spotify
 
 bindsym $mod+r                  exec --no-startup-id $terminal -e ranger
 #bindsym $mod+Shift+r
