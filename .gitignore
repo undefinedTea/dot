@@ -7,5 +7,6 @@
 !roles/linux/files/.config/ncmpcpp
 !roles/linux/files/.config/sway
 !roles/linux/files/.config/ranger
+!roles/linux/files/.config/mako
 
 .vscode
