@@ -2,18 +2,18 @@ max-visible=3
 
 font=Dank Mono 11
 
-background-color=#82a0c1bf
-text-color=#b48cad
-progress-color=#82a0c1e6
+background-color=#2d333f
+text-color=#e6e9ed
+progress-color=#82a0c1
 
-width=100
+width=300
 height=75
 
 margin=15,7,15
 padding=7
 
 border-size=1
-border-color=#82a0c1
+border-color=#b48cad
 border-radius=1
 
 default-timeout=15000
