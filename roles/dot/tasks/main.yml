@@ -10,6 +10,7 @@
   loop:
     - .console
     - .expand
+    - .mutt
     - .session
     - .vim
     - .visual
@@ -17,5 +18,6 @@
     - .gitignore
     - .tmux.conf
     - .zshrc
+    - .mail.gpg
     - .muttrc
     - .offlineimaprc

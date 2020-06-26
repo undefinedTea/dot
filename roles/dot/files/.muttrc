@@ -1,19 +1,7 @@
 set mbox_type=Maildir
 
-set imap_user='hello@undefinedtea.dev'
-set imap_pass='2eP4EZaokc5GBRIkWNRv7g'
+folder-hook 'account.com.google.thomasjanhonen' 'source /home/thomas_janhonen/.mutt/account.com.gmail.thomasjanhonen'
+folder-hook 'account.com.google.undefinedtea' 'source /home/thomas_janhonen/.mutt/account.com.gmail.undefinedtea'
+folder-hook 'account.com.google.whitespacecompany' 'source /home/thomas_janhonen/.mutt/account.com.gmail.whitespacecompany'
 
-set from='hello@undefinedtea.dev'
-set realname='thomas janhonen'
-
-set folder=~/.mail
-set record=+Sent
-set postponed=+Drafts
-set trash=+Trash
-
-set spoolfile=+INBOX
-
-set smtp_url=smtp://hello@undefinedtea.dev:2eP4EZaokc5GBRIkWNRv7g@127.0.0.1:1025
-set ssl_force_tls
-
-#set certificate_file = ''
+source /home/thomas_janhonen/.mutt/account.com.gmail.thomasjanhonen
