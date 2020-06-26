@@ -28,4 +28,5 @@
   loop:
     - lock
     - op
+    - screen
   become: true
