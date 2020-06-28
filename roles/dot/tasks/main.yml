@@ -18,6 +18,5 @@
     - .gitignore
     - .tmux.conf
     - .zshrc
-    - .mail.gpg
     - .muttrc
     - .offlineimaprc
