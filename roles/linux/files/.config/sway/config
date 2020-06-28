@@ -85,7 +85,10 @@ bindsym $mod+Shift+c            exec --no-startup-id slack
 bindsym $mod+r                  exec --no-startup-id $terminal -e ranger
 #bindsym $mod+Shift+r
 
-bindsym $mod+p                  exec lock
+bindsym $mod+p                  exec --no-startup-id idle
+bindsym $mod+Shift+p            exec --no-startup-id lock
+
+bindsym $mod+o                  exec --no-startup-id screen
 
 bindsym $mod+s                  exec --no-startup-id $terminal -e ncmpcpp
 
@@ -148,8 +151,11 @@ bar {
 }
 
 exec --no-startup-id swayidle -w \
+  timeout 900 'lock' \
   timeout 1800 'swaymsg "output * dpms off"' \
-  resume 'swaymsg "output * dpms on"'
+          resume 'swaymsg "output * dpms on"'
+
+for_window [class="Brave"] inhibit_idle fullscreen
 
 exec --no-startup-id wl-paste -t text --watch clipman store --histpath="/home/thomas_janhonen/.local/share/tmp.json
 #exec --no-startup-id wl-paste -p -t text --watch clipman store --histpath="/home/thomas_janhonen/.local/share/tmp_.json

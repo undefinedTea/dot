@@ -26,6 +26,7 @@
         state=link
         force=yes
   loop:
+    - idle
     - lock
     - op
     - screen
