@@ -18,7 +18,7 @@
 
   "network": {
     "format-wifi": "{essid}",
-    "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+    "format-ethernet": "network: {ipaddr}/{cidr}",
     "format-linked": "{ifname}",
 
     "format-disconnected": "disconnected"
