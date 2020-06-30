@@ -1,5 +1,11 @@
 HOST_=$(uname)
 
+nsa() {
+  find . -name '.DS_Store' -type f -delete
+
+  echo 'purge complete 👾'
+}
+
 if [ "$HOST_" = 'Darwin' ]; then
   yay() {
     brew update
@@ -16,17 +22,20 @@ if [ "$HOST_" = 'Darwin' ]; then
     echo 'cleanup complete 🛁'
   }
 
-  nsa() {
-    find . -name '.DS_Store' -type f -delete
-
-    echo 'purge complete 👾'
-  }
-
   uav() {
     yay
     nsa
 
     echo 'process complete 🦄'
+  }
+fi
+
+if [ "$HOST_" = 'Linux' ]; then
+  clean() {
+    clipman clear --all --histpath="/home/thomas_janhonen/.local/share/tmp.json"
+    clipman clear --all --histpath="/home/thomas_janhonen/.local/share/tmp_.json"
+
+    echo 'purge complete 👾'
   }
 fi
 
