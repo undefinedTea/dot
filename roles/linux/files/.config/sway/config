@@ -78,7 +78,6 @@ bindsym $mod+Shift+g            exec --no-startup-id $browse --incognito
 #for_window [class="Brave"] focus
 
 bindsym $mod+c                  exec --no-startup-id code
-bindsym $mod+Shift+c            exec --no-startup-id slack
 
 #bindsym $mod+i
 
