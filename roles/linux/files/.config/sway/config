@@ -80,7 +80,7 @@ bindsym $mod+Shift+g            exec --no-startup-id $browse --incognito
 bindsym $mod+c                  exec --no-startup-id code
 bindsym $mod+Shift+c            exec --no-startup-id slack
 
-bindsym $mod+i                  exec --no-startup-id inkdrop
+#bindsym $mod+i
 
 bindsym $mod+r                  exec $terminal -e ranger
 
