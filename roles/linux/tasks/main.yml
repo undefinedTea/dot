@@ -17,6 +17,7 @@
   loop:
     - .config
     - .theme
+    - .xinitrc
     - .Xresources
     - asset
 
