@@ -52,6 +52,9 @@ if [ "$HOST_" = 'Linux' ]; then
   if [[ $(tty) = /dev/tty1 ]]; then
     exec sway
   fi
+  if [[ $(tty) = /dev/tty3 ]]; then
+    exec startx
+  fi
 fi
 
 stty -ixon
