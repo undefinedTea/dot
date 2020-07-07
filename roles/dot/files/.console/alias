@@ -22,5 +22,17 @@ w() {
 
 #covid-19
 covid-19() {
-  curl https://corona-stats.online/"${1:-FI}"
+  local SCHEME="$1"
+
+  case "$SCHEME" in
+  world)
+    curl https://corona-stats.online/
+    ;;
+  recent)
+    curl https://corona-stats.online/updates
+    ;;
+  *)
+    curl https://corona-stats.online/"${1:-FI}"
+    ;;
+  esac
 }

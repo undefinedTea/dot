@@ -27,8 +27,8 @@ bindswitch --reload --locked lid:off output $artemis enable
 bindsym $mod+Return             exec $terminal
 #bindsym $mod+Shift+Return
 
-bindsym $mod+t                  exec $terminal -e mutt
-#bindsym $mod+Shift+t
+bindsym $mod+e                  exec $terminal -e mutt
+#bindsym $mod+Shift+e
 
 #bindsym $mod+Space
 #bindsym $mod+Shift+Space
