@@ -49,10 +49,10 @@ source ~/.console/export
 HOST_=$(uname)
 
 if [ "$HOST_" = 'Linux' ]; then
-  if [[ $(tty) = /dev/tty1 ]]; then
+  if [[ $(tty) = /dev/tty3 ]]; then
     exec sway
   fi
-  if [[ $(tty) = /dev/tty3 ]]; then
+  if [[ $(tty) = /dev/tty1 ]]; then
     exec startx
   fi
 fi

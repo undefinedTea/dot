@@ -15,3 +15,5 @@ export GPG_TTY=$(tty)
 export RESTIC_REPOSITORY=/volumes/data/ruby
 
 export LC_ALL=en_US.UTF-8
+
+export PATH="$HOME/.local/bin:$PATH"
