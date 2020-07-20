@@ -30,6 +30,7 @@
   loop:
     - idle
     - lock
+    - lock-way
     - op
     - screen
   become: true
