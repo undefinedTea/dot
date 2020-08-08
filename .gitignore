@@ -9,4 +9,6 @@
 !roles/linux/files/.config/ranger
 !roles/linux/files/.config/mako
 
+roles/linux/files/.local/share
+
 .vscode
