@@ -8,7 +8,9 @@
 !roles/linux/files/.config/sway
 !roles/linux/files/.config/ranger
 !roles/linux/files/.config/mako
+!roles/linux/files/.config/dunst
 
-roles/linux/files/.local/share
+roles/linux/files/.local/*
+!roles/linux/files/.local/bin
 
 .vscode
