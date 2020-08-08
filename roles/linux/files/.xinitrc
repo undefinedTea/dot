@@ -7,6 +7,7 @@ feh --no-fehbg --bg-fill /home/thomas_janhonen/asset/desktop.jpg &
 
 picom --fading &
 
+dwmblocks &
 while true; do
   #>/dev/null 2>&1 redirect error and success
   dwm >/dev/null 2>&1
