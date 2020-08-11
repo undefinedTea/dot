@@ -2,9 +2,6 @@
 
 set -eCu
 
-swayidle \
-  timeout 3 'lock' \
-  timeout 15 'swaymsg "output * dpms off"' \
-          resume 'swaymsg "output * dpms on"'
-
-kill %%
+#lock
+#sleep 15s
+xset dpms force off

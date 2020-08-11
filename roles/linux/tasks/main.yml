@@ -29,6 +29,7 @@
         force=yes
   loop:
     - idle
+    - idle-way
     - lock
     - lock-way
     - op

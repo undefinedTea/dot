@@ -10,7 +10,7 @@ distort=(-filter Gaussian -resize 17% -define "filter:sigma=1.5" -resize 500.5%)
 image=$(mktemp --suffix=.png)
 output=(import -window root)
 
-command -- "${shot[@]}" "$image"
+command -- "${output[@]}" "$image"
 
 lock_parameter=("--no-unlock-indicator" "--image" "$image")
 convert "$image" "${distort[@]}" \
@@ -19,3 +19,6 @@ convert "$image" "${distort[@]}" \
 if ! "${lock_command[@]}" "${lock_parameter[@]}" &> /dev/null; then
   "${lock_command[@]}"
 fi
+
+sleep 13m
+xset dpms force off
