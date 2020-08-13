@@ -42,7 +42,7 @@ set-window-option -g clock-mode-colour $active
 session="#[fg=$feature]#S"
 
 nasa="#[fg=$feature]made in hki"
-date="#[fg=$inactive]%r"
+date="#[fg=$inactive]%T"
 host="#[fg=$active]@ruby"
 
 set -g status-left $session' '

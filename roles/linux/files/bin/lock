@@ -19,6 +19,3 @@ convert "$image" "${distort[@]}" \
 if ! "${lock_command[@]}" "${lock_parameter[@]}" &> /dev/null; then
   "${lock_command[@]}"
 fi
-
-sleep 13m
-xset dpms force off
