@@ -10,6 +10,5 @@ picom --fading &
 dwmblocks &
 while true; do
   #>/dev/null 2>&1 redirect error and success
-  dwm >/dev/null 2>&1
+  eval $(ssh-agent) dwm >/dev/null 2>&1
 done
-eval $(ssh-agent) dwm
