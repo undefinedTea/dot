@@ -7,9 +7,11 @@ lock_composit=/home/thomas_janhonen/asset/composit.png
 
 distort=(-filter Gaussian -resize 17% -define "filter:sigma=1.5" -resize 500.5%)
 
-image=$(scrot --silent /tmp/screen.png)
+image=/tmp/screen.png
 
-lock_parameter=("--no-unlock-indicator" "--image" "/tmp/screen.png")
+scrot --silent $image
+
+lock_parameter=("--no-unlock-indicator" "--image" "$image")
 convert "$image" "${distort[@]}" \
   "${lock_composit}" -gravity center -composite "$image"
 
