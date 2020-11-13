@@ -9,7 +9,7 @@ distort=(-filter Gaussian -resize 17% -define "filter:sigma=1.5" -resize 500.5%)
 
 image=$(scrot --silent /tmp/screen.png)
 
-lock_parameter=("--no-unlock-indicator" "--image" "$image")
+lock_parameter=("--no-unlock-indicator" "--image" "/tmp/screen.png")
 convert "$image" "${distort[@]}" \
   "${lock_composit}" -gravity center -composite "$image"
 
