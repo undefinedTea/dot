@@ -13,4 +13,7 @@
 roles/linux/files/.local/*
 !roles/linux/files/.local/bin
 
+roles/dot/files/.ssh/*
+!roles/dot/files/.ssh/config
+
 .vscode

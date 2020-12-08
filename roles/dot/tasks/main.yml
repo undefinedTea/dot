@@ -12,6 +12,7 @@
     - .expand
     - .mutt
     - .session
+    - .ssh/config
     - .vim
     - .visual
     - .gitconfig
