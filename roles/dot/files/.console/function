@@ -31,30 +31,6 @@ if [ "$HOST_" = 'Darwin' ]; then
 fi
 
 if [ "$HOST_" = 'Linux' ]; then
-  restore() {
-    restic backup /                                 \
-      --exclude /dev                                \
-      --exclude /proc                               \
-      --exclude /sys                                \
-      --exclude /tmp                                \
-      --exclude /run                                \
-      --exclude /var/run                            \
-      --exclude /lost+found                         \
-      --exclude /mnt                                \
-      --exclude /media                              \
-      --exclude /home/thomas_janhonen/data          \
-      --exclude /home/thomas_janhonen/.cache        \
-      --exclude /home/thomas_janhonen/.local/share
-    
-    restic forget --keep-daily 7 --keep-weekly 3 --keep-monthly 1 --prune
-    restic check
-    restic cache --cleanup
-
-    echo 'process complete \o/'
-  }
-fi
-
-if [ "$HOST_" = 'Linux' ]; then
   clean() {
     clipman clear --all --histpath="/home/thomas_janhonen/.local/share/tmp.json"
     clipman clear --all --histpath="/home/thomas_janhonen/.local/share/tmp_.json"

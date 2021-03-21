@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+case $BLOCK_BUTTON in
+  1) notify-send "tesla" "";;
+  3) st -e vim "$0";;
+#  9)
+esac
+
+CAPACITY=$(cat /sys/class/power_supply/BAT0/capacity)
+STATUS=$(cat /sys/class/power_supply/BAT0/status)
+
+if [ "$STATUS" = "Charging" ]; then
+  #printf "🔌 %s%% %s" "$CAPACITY" "$STATUS"
+  echo "🔌 $CAPACITY% $STATUS"
+else
+  #printf "%s%% %s" "$CAPACITY" "$STATUS"
+  echo "$CAPACITY% $STATUS"
+fi

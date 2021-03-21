@@ -1,7 +1,20 @@
 #!/usr/bin/env bash
 
 case $BLOCK_BUTTON in
-  1)
-  3)
-  9)
+  1) notify-send "vol" "whispers is listening";;
+  3) st -e vim "$0";;
+#  9)
 esac
+
+[ $(pulsemixer --get-mute) = 1 ] && echo "vol.0" && exit
+
+volume="$(pulsemixer --get-volume)"
+if [ "volume" -gt "70" ]; then
+  visual="5"
+elif [ "volume" -gt "30" ]; then
+  visual="3"
+else
+  visual="1"
+fi
+
+echo "vol.$visual"

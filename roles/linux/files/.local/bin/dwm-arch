@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 case $BLOCK_BUTTON in
-  1)
-  3)
-  9)
+  1) notify-send "system" "update";;
+  3) st -e vim "$0";;
+#  9)
 esac
+
+yay -Qu | ack -c "[ignored]" | sed "s/^/📦/;s/^📦0$//g"
