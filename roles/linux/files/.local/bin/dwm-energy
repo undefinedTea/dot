@@ -14,5 +14,5 @@ if [ "$STATUS" = "Charging" ]; then
   echo "🔌 $CAPACITY% $STATUS"
 else
   #printf "%s%% %s" "$CAPACITY" "$STATUS"
-  echo "$CAPACITY% $STATUS"
+  echo "🔋 $CAPACITY%"
 fi

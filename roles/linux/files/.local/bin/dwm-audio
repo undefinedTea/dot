@@ -9,9 +9,9 @@ esac
 [ $(pulsemixer --get-mute) = 1 ] && echo "vol.0" && exit
 
 volume="$(pulsemixer --get-volume)"
-if [ "volume" -gt "70" ]; then
+if [ "volume" -gt "70 70" ]; then
   visual="5"
-elif [ "volume" -gt "30" ]; then
+elif [ "volume" -gt "30 30" ]; then
   visual="3"
 else
   visual="1"
