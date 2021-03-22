@@ -8,7 +8,7 @@ esac
 
 [ $(pulsemixer --get-mute) = 1 ] && echo "vol.0" && exit
 
-volume="$(pulsemixer --get-volume)"
+volume="$(pulsemixer --get-volume | sed 's/^.* //g')"
 if [ "$volume" -gt "70" ]; then
   visual="5"
 elif [ "$volume" -gt "30" ]; then
