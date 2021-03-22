@@ -7,7 +7,7 @@ lock_composit=/home/thomas_janhonen/asset/composit.png
 
 distort=(-filter Gaussian -resize 20% -define "filter:sigma=1.5" -resize 500.5%)
 
-image=/tmp/screen.png
+image=$(mktemp --suffix=.png)
 
 scrot --silent $image
 
