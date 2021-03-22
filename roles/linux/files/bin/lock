@@ -5,16 +5,15 @@ set -eCu
 lock_command=(i3lock)
 lock_composit=/home/thomas_janhonen/asset/composit.png
 
-distort=(-filter Gaussian -resize 17% -define "filter:sigma=1.5" -resize 500.5%)
+distort=(-filter Gaussian -resize 20% -define "filter:sigma=1.5" -resize 500.5%)
 
 image=/tmp/screen.png
 
 scrot --silent $image
 
+lock_parameter=("--no-unlock-indicator" "--image" "$image")
 convert "$image" "${distort[@]}" \
   "${lock_composit}" -gravity center -composite "$image"
-
-lock_parameter=("--no-unlock-indicator" "--image" "$image")
 
 if ! "${lock_command[@]}" "${lock_parameter[@]}" &> /dev/null; then
   "${lock_command[@]}"
