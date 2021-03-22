@@ -9,7 +9,7 @@ distort=(-filter Gaussian -resize 20% -define "filter:sigma=1.5" -resize 500.5%)
 
 image=$(mktemp --suffix=.png)
 
-scrot --silent $image
+scrot -o --silent $image
 
 lock_parameter=("--no-unlock-indicator" "--image" "$image")
 convert "$image" "${distort[@]}" \
