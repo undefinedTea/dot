@@ -11,8 +11,8 @@ STATUS=$(cat /sys/class/power_supply/BAT0/status)
 
 if [ "$STATUS" = "Charging" ]; then
   #printf "🔌 %s%% %s" "$CAPACITY" "$STATUS"
-  echo "🔌 $CAPACITY% $STATUS"
+  echo "[ 🔌 $CAPACITY% $STATUS ]"
 else
   #printf "%s%% %s" "$CAPACITY" "$STATUS"
-  echo "🔋 $CAPACITY%"
+  echo "[ 🔋 $CAPACITY% ]"
 fi

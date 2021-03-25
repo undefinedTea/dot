@@ -6,15 +6,15 @@ case $BLOCK_BUTTON in
 #  9)
 esac
 
-[ $(pulsemixer --get-mute) = 1 ] && echo "vol.0" && exit
+[ $(pulsemixer --get-mute) = 1 ] && echo "[ 🔇 vol.0 ]" && exit
 
 volume="$(pulsemixer --get-volume | sed 's/^.* //g')"
 if [ "$volume" -gt "70" ]; then
-  visual="5"
+  visual="🔊"
 elif [ "$volume" -gt "30" ]; then
-  visual="3"
+  visual="🔉"
 else
-  visual="1"
+  visual="🔈"
 fi
 
-echo "vol.$visual"
+echo "[ $visual vol.$volume ]"

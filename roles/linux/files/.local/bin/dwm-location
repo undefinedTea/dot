@@ -6,4 +6,4 @@ case $BLOCK_BUTTON in
 #  9)
 esac
 
-curl -H "Accept-Languge: en" wttr.in/"Helsinki?format=%c+%t+/+%f+%p\n"
+curl -H "Accept-Languge: en" wttr.in/"Helsinki?format=\[+%c+%t+/+%f+%p+\]\n"

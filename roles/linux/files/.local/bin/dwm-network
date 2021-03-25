@@ -5,3 +5,23 @@ case $BLOCK_BUTTON in
   3)
   9)
 esac
+
+update() {
+  total=0
+
+  for line; do
+    read -r i < "$line"
+    total=$(( total + i ))
+  done
+
+  cache=/home/thomas_janhonen/.cache/${1##*/}
+  [ -f "$cache" ] && read -r old < "$cache" || old=0
+
+  printf %d\\n "$total" > "$cache"
+  printf %d\\n $(( total - old ))
+}
+
+rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
+tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
+
+printf "[ 🔻%4sB 🔺%4sB\\n ]" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)
