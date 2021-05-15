@@ -21,3 +21,9 @@
     - .zshrc
     - .muttrc
     - .offlineimaprc
+
+- name: gpg | link
+  file: src={{ ansible_env.PWD }}/roles/dot/files/gpg.conf
+        path=~/.gnupg/gpg.conf
+        state=link
+        force=yes
