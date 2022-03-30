@@ -11,7 +11,7 @@
 !roles/linux/files/.config/dunst
 
 roles/linux/files/.local/*
-!roles/linux/files/.local/bin
+!roles/linux/files/.local/bin/dwm-*
 
 roles/dot/files/.ssh/*
 !roles/dot/files/.ssh/config

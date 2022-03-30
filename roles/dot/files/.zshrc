@@ -46,6 +46,9 @@ source ~/.console/visual
 #
 source ~/.console/export
 
+# influx
+source <(influx completion zsh)
+
 HOST_=$(uname)
 
 if [ "$HOST_" = 'Linux' ]; then
